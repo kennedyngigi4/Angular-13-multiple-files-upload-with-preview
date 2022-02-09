@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1 bg-light mt-5">
+            <div class="py-5 images">
+                <div class="row">
+                    <div class="col-4 mt-3" *ngFor="let image of imagepath; index as i">
+                        <p class="text-danger" (click)="removeImg(i)">DELETE</p>
+                        <img class="img-fluid" src="{{image}}" />
+                    </div>
+                </div>
+            </div>
+            <form>
+                <div>
+                    <input type="file" (change)="getFiles($event)" multiple>
+                </div>
+                <button class="btn btn-success px-5 my-4" (click)="uploadFiles()">Upload Files</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
